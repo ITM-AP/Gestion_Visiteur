@@ -50,32 +50,18 @@ table {
     table-layout: fixed;
     width: 100%; /* Prend la largeur totale disponible */
     border-collapse: collapse; /* Fusionne les bordures des cellules */
+}
 
-  }
-
-  td, th{
-    padding-bottom: 5px;
+td{
+    margin: 5px;
     text-align: center;
-  }
+    justify-content: center;
+    align-items: center;
+}
+.rdv{
+}
 
-  th:nth-child(1),
-  td:nth-child(1),
-  th:nth-child(2),
-  td:nth-child(2),
-  th:nth-child(3),
-  td:nth-child(3) {
-      width: 31%; /* 3 colonnes égales (25% de la largeur totale moins l'espace des bordures) */
-  }
-
-  th:nth-child(4),
-  td:nth-child(4) {
-      width: 9%; /* 4ème colonne de 40px de large */
-  }
-
-
-  .delete-rdv{
-  }
-
-  .delete-rdv:hover{
+.rdv:hover{
     cursor: pointer;
-  }
+    background-color: rgba(255, 0, 0, 0.445);
+}
