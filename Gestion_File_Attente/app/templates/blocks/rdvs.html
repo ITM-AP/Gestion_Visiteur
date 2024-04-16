@@ -10,7 +10,7 @@
         </thead>
         <tbody>                  
             {% for rdv in rdvs %}
-                <tr>
+                <tr class="rdv" rdv-id="{{ rdv.id }}">
                     <td>{{ rdv.date }}</td>
                     <td>{{ rdv.time }}</td>
                     <td>{{ rdv.entreprise }}</td>
