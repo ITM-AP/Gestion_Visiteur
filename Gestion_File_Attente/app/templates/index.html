@@ -9,6 +9,34 @@
     <title>Document</title>
 </head>
 <body>
-    TOTO
+<div class="container">
+    <div class="form-container">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="date" name="date" id="date">
+            <input type="time" name="time" id="time">
+            <input type="text" name="entreprise" id="entreprise" placeholder="Entreprise">
+            <button type="submit">Valider</button>
+        </form>
+    </div>
+    <div class="rdv-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Heure d'arrivée</th>
+                    <th>Entreprise</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 </body>
 </html>
