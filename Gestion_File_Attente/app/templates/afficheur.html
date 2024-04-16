@@ -11,16 +11,6 @@
 </head>
 <body>
 <div class="container">
-    <div class="form-container">
-        <form action="" method="POST">
-            {% csrf_token %}
-            <input type="date" name="date" id="date">
-            <input type="time" name="time" id="time">
-            <input type="text" name="entreprise" id="entreprise" placeholder="Entreprise">
-            <button type="submit">Valider</button>
-        </form>
-    </div>
-
     {% include 'rdvs.html' %}
 </div>
 </body>
