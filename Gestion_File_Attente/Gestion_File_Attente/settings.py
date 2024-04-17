@@ -27,12 +27,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    '172.20.10.76',
+    '192.168.1.147',
 ]
 
-CORS_ORIGIN_WHITELIST = [
-    'http://172.20.10.76:8080',
-    # Ajoutez d'autres origines de confiance si nécessaire
+#CORS_ORIGIN_WHITELIST = [
+#    'http://192.168.1.147:8080',
+#    # Ajoutez d'autres origines de confiance si nécessaire
+#]
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://192.168.1.147:8080',
 ]
 
 # Application definition
