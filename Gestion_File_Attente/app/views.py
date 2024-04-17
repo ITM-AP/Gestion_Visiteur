@@ -1,3 +1,4 @@
+from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from .models import Rdv
 from .forms import RdvForm
