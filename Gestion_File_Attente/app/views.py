@@ -1,5 +1,3 @@
-from django.shortcuts import render, redirect
-from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from .models import Rdv
 from .forms import RdvForm
@@ -19,7 +17,6 @@ def app_view(request):
         if form.is_valid():
             return redirect('app_view')
 
-@csrf_exempt  
 def delete_rdv(request):
     if request.method == 'POST':
         data = json.load(request)
