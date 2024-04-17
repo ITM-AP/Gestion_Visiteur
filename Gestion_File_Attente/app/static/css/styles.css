@@ -6,6 +6,7 @@
 
 body{
     background-color: rgb(221, 221, 221);
+    font-size: 80px;
 }
 .form-container{
     max-width: 200px;
@@ -39,7 +40,7 @@ button{
 }
 
 .rdv-container{
-    max-width: 400px;
+    max-width: auto;
     margin: 10px auto;
     background-color: white;
     padding: 10px;
@@ -50,15 +51,18 @@ table {
     table-layout: fixed;
     width: 100%; /* Prend la largeur totale disponible */
     border-collapse: collapse; /* Fusionne les bordures des cellules */
+
 }
 
 td{
     margin: 5px;
     text-align: center;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+    border-top: 1px rgb(151, 151, 151) solid;
 }
 .rdv{
+    padding: 5px;
 }
 
 .rdv:hover{

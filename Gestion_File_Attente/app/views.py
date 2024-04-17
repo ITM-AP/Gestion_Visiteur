@@ -10,7 +10,7 @@ import json
 def app_view(request):
     if request.method == 'GET':
         today = date.today()
-        rdvs = Rdv.objects.all().order_by('time').order_by('date')
+        rdvs = Rdv.objects.all().order_by('date', 'time')
         form = RdvForm()
         return render(request, 'index.html', {'rdvs': rdvs})
     elif request.method == 'POST':
