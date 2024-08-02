@@ -2,3 +2,4 @@ env/
 Gestion_File_Attente/app/__pycache__/
 Gestion_File_Attente/Gestion_File_Attente/__pycache__/
 Gestion_File_Attente/app/migrations/__pycache__/
+Gestion_File_Attente/db.sqlite3
