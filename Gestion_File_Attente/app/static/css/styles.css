@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-shadow: none;
 }
 
-body{
+body {
     background-color: rgb(221, 221, 221);
     font-family: 'Exo', sans-serif;
     font-size: 80px;
@@ -18,7 +18,7 @@ body{
     justify-content: space-between;
 }
 
-.form-container{
+.form-container {
     display: flex;
     align-items: left;
     background-color: white;
@@ -27,12 +27,12 @@ body{
     flex-grow: 1;
 }
 
-form{
+form {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
 }
 
-input{
+input {
     width: 150px;
     font-size: 20px;
     border-radius: 8px;
@@ -41,25 +41,27 @@ input{
     text-align: center;
 }
 
-input.input{
+input.input {
     background-color: rgb(247, 247, 247);
     border: 2px rgb(214, 214, 214) solid;
 }
-input.input:hover{
-    cursor:text;
+
+input.input:hover {
+    cursor: text;
     background-color: rgb(255, 255, 255);
 }
 
-input.submit{
-    background-color:rgb(32, 154, 255);
+input.submit {
+    background-color: rgb(32, 154, 255);
     border: 2px rgb(8, 123, 255) solid;
 }
-input.submit:hover{
+
+input.submit:hover {
     cursor: pointer;
-    background-color:rgb(85, 178, 255);
+    background-color: rgb(85, 178, 255);
 }
 
-.rdv-container{
+.rdv-container {
     max-width: auto;
     margin: 10px auto;
     background-color: white;
@@ -69,22 +71,25 @@ input.submit:hover{
 
 table {
     table-layout: fixed;
-    width: 100%; /* Prend la largeur totale disponible */
-    border-collapse: collapse; /* Fusionne les bordures des cellules */
+    width: 100%;
+    /* Prend la largeur totale disponible */
+    border-collapse: collapse;
+    /* Fusionne les bordures des cellules */
 }
 
-td{
+td {
     margin: 5px;
     text-align: center;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     border-top: 1px rgb(151, 151, 151) solid;
 }
-.rdv{
+
+.rdv {
     padding: 5px;
 }
 
-.rdv:hover{
+.rdv:hover {
     cursor: pointer;
-    background-color: rgba(255, 0, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
 }
