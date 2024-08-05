@@ -1,5 +1,5 @@
 env/
-Gestion_File_Attente/app/__pycache__/
-Gestion_File_Attente/Gestion_File_Attente/__pycache__/
-Gestion_File_Attente/app/migrations/__pycache__/
-Gestion_File_Attente/db.sqlite3
+Gestion_Visiteur/app/__pycache__/
+Gestion_Visiteur/Gestion_Visiteur/__pycache__/
+Gestion_Visiteur/app/migrations/__pycache__/
+Gestion_Visiteur/db.sqlite3
