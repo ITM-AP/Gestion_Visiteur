@@ -1,5 +1,2 @@
 env/
-Gestion_Visiteur/app/__pycache__/
-Gestion_Visiteur/Gestion_Visiteur/__pycache__/
-Gestion_Visiteur/app/migrations/__pycache__/
 Gestion_Visiteur/db.sqlite3
