@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+
+  gestion_visiteur:
+    container_name: gestion_visiteur
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DJANGO_ALLOWED_HOSTS: 192.168.1.148
+      DJANGO_CSRF_TRUSTED_ORIGINS: 192.168.1.148

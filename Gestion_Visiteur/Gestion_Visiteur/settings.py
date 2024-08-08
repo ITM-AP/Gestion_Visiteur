@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,9 +25,12 @@ SECRET_KEY = 'django-insecure-i&-aauf$x%+0wy3&7$nz1drhvv4!l++n@hopi8e-u+8xz&#o&w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+allowed_hosts = os.getenv('DJANGO_ALLOWED_HOSTS')
+csrf_trusted_origins = os.getenv('DJANGO_CSRF_TRUSTED_ORIGINS')
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    '192.168.1.147',
+    '192.168.1.148',
+    allowed_hosts
 ]
 
 #CORS_ORIGIN_WHITELIST = [
@@ -36,7 +39,8 @@ ALLOWED_HOSTS = [
 #]
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://192.168.1.147:8080',
+    'http://192.168.1.148:8080',
+    f"http://{csrf_trusted_origins}:8080"
 ]
 
 # Application definition
