@@ -1,5 +1,5 @@
 {% block form %}
-    <form action="" method="POST">
+    <form action="/add-rdv/" method="POST">
         {% csrf_token %}
         <input class="input" type="date" name="date" id="date" required>
         <input class="input" type="time" name="time" id="time" required>

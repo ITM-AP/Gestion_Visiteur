@@ -8,6 +8,11 @@ import json
 
 def app_view(request):
     rdvs = Rdv.objects.all().order_by('date', 'time')
+    if request.method == 'GET':
+        return render(request, 'index.html', {'rdvs': rdvs})
+
+def add_rdv(request):
+    rdvs = Rdv.objects.all()
     form = RdvForm()
     if request.method == 'POST':
         form = RdvForm(request.POST)
@@ -16,8 +21,6 @@ def app_view(request):
             return redirect('app_view')
         # Si le formulaire n'est pas valide, rend le formulaire avec les erreurs
         return render(request, 'index.html', {'rdvs': rdvs})
-    # Si la méthode est GET ou si le formulaire n'est pas valide, affiche tous les rendez-vous
-    return render(request, 'index.html', {'rdvs': rdvs})
 
 def delete_rdv(request):
     if request.method == 'POST':
