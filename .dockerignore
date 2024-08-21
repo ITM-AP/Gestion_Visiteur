@@ -1,0 +1,6 @@
+env/
+.env
+.gitignore
+db.sqlite3
+Dockerfile.dev
+Dockerfile.prod

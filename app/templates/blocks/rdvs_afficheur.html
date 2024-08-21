@@ -1,0 +1,20 @@
+{% block rdvs %}
+<table>
+    <thead>
+        <tr>
+            <th>Heure d'arrivée</th>
+            <th>Entreprise</th>
+            <th>Nombre de Visiteur</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for rdv in rdvs %}
+        <tr class="rdv" rdv-id="{{ rdv.id }}">
+            <td>{{ rdv.time }}</td>
+            <td>{{ rdv.entreprise }}</td>
+            <td>{{ rdv.nombreVisiteur }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

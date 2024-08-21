@@ -1,0 +1,6 @@
+app/__pycache__
+app/migrations
+env/
+Gestion_Visiteur/__pycache__
+.env
+db.sqlite3
