@@ -2,4 +2,4 @@ env/
 .env
 .gitignore
 db.sqlite3
-Dockerfile.prod
+Dockerfile
