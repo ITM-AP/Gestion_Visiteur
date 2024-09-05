@@ -5,23 +5,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <script src="{% static 'js/script.js' %}" defer></script>
+    <script src="https://kit.fontawesome.com/de7ce9e8e9.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="form-container">
-            {% include 'blocks/form.html' %}
-        </div>
-    </header>
+    <div class="container">
+        <h1 class="titre">Gestion des visiteurs</h1>
+        <form action="/add-rdv/" method="POST">
+            {% csrf_token %}
+            <input class="input" type="date" name="date" id="date" required>
+            <input class="input" type="time" name="time" id="time" min="08:00" max="18:00"required>
+            <input class="input" type="text" name="entreprise" id="entreprise" placeholder="Entreprise" required>
+            <input class="input" type="number" name="nombreVisiteur" id="nombreVisiteur" placeholder="Nombre de visiteur"
+                required>
+            <input class="submit" type="submit" name="submit" id="submit" value="OK">
+        </form>
 
-    <main>
         <div class="rdv-container">
-            {% include 'blocks/rdvs.html' %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Heure d'arrivée</th>
+                        <th>Entreprise</th>
+                        <th>Nombre de Visiteur</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for rdv in rdvs %}
+                    <tr class="rdv" rdv-id="{{ rdv.id }}">
+                        <td>{{ rdv.date }}</td>
+                        <td>{{ rdv.time }}</td>
+                        <td>{{ rdv.entreprise }}</td>
+                        <td>{{ rdv.nombreVisiteur }}</td>
+                        <td>    
+                            <button class="delete-rdv" rdv-id="{{ rdv.id }}" aria-label="Supprimer">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
-    </main>
+
+    </div>
 </body>
 
 </html>
