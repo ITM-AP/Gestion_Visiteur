@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-shadow: none;
+}
+
+body {
+    background-color: rgb(221, 221, 221);
+    font-family: 'Exo', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    min-height: 100vh;      /* S'assure que le conteneur est centré par rapport à la hauteur de la fenêtre */
+}
+
+.container {
+    width: 800px;
+}
+
+/**********************/
+/**      HEADER      **/
+/**********************/
+.titre{
+    font-size: 50px;
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    background-color: white;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+input {
+    font-size: 15px;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+}
+
+input::-webkit-inner-spin-button, 
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+input.input {
+    flex: 6;
+    min-width: 0;
+    background-color: rgb(247, 247, 247);
+    border: 2px rgb(214, 214, 214) solid;
+
+}
+
+input.input:hover {
+    cursor: text;
+    background-color: rgb(255, 255, 255);
+}
+
+input.submit {
+    flex: 1;
+    min-width: 0;
+    font-weight: bold;
+    background-color: rgb(32, 154, 255);
+    border: 2px rgb(8, 123, 255) solid;
+}
+
+input.submit:hover {
+    cursor: pointer;
+    background-color: rgb(85, 178, 255);
+}
+
+/********************/
+/**      MAIN      **/
+/********************/
+
+.rdv-container {
+    font-size: 18px;
+    margin: 10px auto;
+    background-color: white;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    margin: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px rgb(151, 151, 151) solid;
+}
+
+th:last-child, td:last-child {
+    width: 5%; /* Ajustez la largeur pour la dernière colonne */
+}
+
+th:not(:last-child), td:not(:last-child) {
+    width: auto;
+}
+
+.rdv {
+    padding: 5px;
+}
+
+.delete-rdv{
+    font-size: 18px;
+    background: none;      /* Supprime le fond */
+    border: none;          /* Supprime les bordures */
+    padding: 0;            /* Supprime le padding */
+    cursor: pointer;       /* Change le curseur pour indiquer que c'est cliquable */
+    color: inherit;        /* Hérite de la couleur du texte parent */
+}
+
+.delete-rdv{
+    display: none;
+}
+.delete-rdv:hover{
+    color: rgb(212, 0, 0);
+}
+.rdv:hover .delete-rdv{
+    display: contents;
+}

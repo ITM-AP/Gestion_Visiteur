@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-shadow: none;
+}
+
+body {
+    background-color: rgb(221, 221, 221);
+    font-family: 'Exo', sans-serif;
+    font-size: 80px;
+    margin: 30px;
+}
+
+/********************/
+/**      MAIN      **/
+/********************/
+
+.rdv-container {
+    max-width: auto;
+    margin: 10px auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    /* Prend la largeur totale disponible */
+    border-collapse: collapse;
+    /* Fusionne les bordures des cellules */
+}
+
+td {
+    margin: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px rgb(151, 151, 151) solid;
+}
+
+.rdv {
+    padding: 5px;
+}
+
+.rdv:hover {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.5);
+}
