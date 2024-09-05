@@ -45,7 +45,3 @@ td {
     padding: 5px;
 }
 
-.rdv:hover {
-    cursor: pointer;
-    background-color: rgba(255, 0, 0, 0.5);
-}
