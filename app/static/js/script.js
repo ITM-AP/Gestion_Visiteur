@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    const rdv = document.querySelectorAll(".rdv");
+    const rdv = document.querySelectorAll(".delete-rdv");
   
     rdv.forEach((icon) => {
       icon.addEventListener("click", function () {
