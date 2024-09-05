@@ -2,5 +2,6 @@ app/__pycache__
 env/
 Gestion_Visiteur/__pycache__
 .env
+staticfiles
 db.sqlite3
 docker-builder-antoineitm.sh
