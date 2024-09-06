@@ -1,5 +1,15 @@
 
 document.addEventListener("DOMContentLoaded", function () {
+  flatpickr('.datepicker', {
+    enableTime: true,
+    time_24hr: true,
+    altInput: true,
+    altFormat: "d M Y H:i ",
+    locale: "fr",
+    minDate: "today",
+    weekNumbers: true,
+    minuteIncrement: 15,
+  });
     const rdv = document.querySelectorAll(".delete-rdv");
   
     rdv.forEach((icon) => {
@@ -45,4 +55,3 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-  
