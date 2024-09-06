@@ -8,7 +8,7 @@ import json
 
 
 def app_view(request):
-    rdvs = Rdv.objects.all().order_by('date', 'time')
+    rdvs = Rdv.objects.all().order_by('dateTime')
     return render(request, 'index.html', {'rdvs': rdvs})
 
 
@@ -44,5 +44,5 @@ def delete_rdv(request):
 def afficheur_view(request):
     if request.method == 'GET':
         today = date.today()
-        rdvs = Rdv.objects.all().filter(date=today).order_by('time')
+        rdvs = Rdv.objects.all().filter(dateTime__date=today).order_by('dateTime')
         return render(request, 'afficheur.html', {'rdvs': rdvs})
