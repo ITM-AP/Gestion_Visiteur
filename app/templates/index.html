@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <script src="{% static 'js/index.js' %}" defer></script>
     <script src="https://kit.fontawesome.com/de7ce9e8e9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js"></script>
     <title>Document</title>
 </head>
 
@@ -16,8 +19,7 @@
         <h1 class="titre">Gestion des visiteurs</h1>
         <form action="/add-rdv/" method="POST">
             {% csrf_token %}
-            <input class="input" type="date" name="date" id="date" required>
-            <input class="input" type="time" name="time" id="time" min="08:00" max="18:00"required>
+            <input class="input datepicker" type="text" name="dateTime" id="myID" placeholder="Date" required>
             <input class="input" type="text" name="entreprise" id="entreprise" placeholder="Entreprise" required>
             <input class="input" type="number" name="nombreVisiteur" id="nombreVisiteur" placeholder="Nombre de visiteur"
                 required>
@@ -38,8 +40,8 @@
                 <tbody>
                     {% for rdv in rdvs %}
                     <tr class="rdv" rdv-id="{{ rdv.id }}">
-                        <td>{{ rdv.date }}</td>
-                        <td>{{ rdv.time }}</td>
+                        <td>{{ rdv.dateTime|date:"d F Y" }}</td>
+                        <td>{{ rdv.dateTime|date:"H:i" }}</td>
                         <td>{{ rdv.entreprise }}</td>
                         <td>{{ rdv.nombreVisiteur }}</td>
                         <td>    
