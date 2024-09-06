@@ -4,8 +4,7 @@ from django.db import models
 
 
 class Rdv(models.Model):
-    date = models.DateField()
-    time = models.TimeField()
+    dateTime = models.DateTimeField()
     entreprise = models.CharField(max_length=50)
     nombreVisiteur = models.IntegerField()
 
